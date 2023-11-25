@@ -1,0 +1,53 @@
+
+
+Step 1 – Install Docker Desktop and sign up in Docker Hub
+Step 2- Log in with credentials in Docker Desktop and start Docker engine
+
+
+code
+ 
+docker init 
+docker compose up –build 
+docker images 
+
+ 
+Step 7: Login to docker using docker login 
+ 
+docker tag image_name DOCKER_HUB_NAME/image_name to tag the image which is a custom, human-readable manifest identifier that is typically a specific version or variant of an image. 
+docker push DOCKER_HUB_NAME/image_name to share your images to the Docker Hub registry or to a self-hosted one.  
+docker pull DOCKER_HUB_NAME/image_name to pull your images from the Docker Hub registry to the local repository.
+ 
+
+
+
+
+B) Develop docker image for python script and store it on docker registry
+Use the docker build -t image_name command – used to build a Docker image from a Dockerfile
+Use docker images command - used to list all the Docker images that are currently stored on the local system.
+Use docker run -d -p 5000:5000 image_name command - used to run a Docker container in detached mode (-d) and map a port from the host to a port in the container (-p).
+-d runs the container in the background, freeing up the terminal for other commands.
+-p specifies the port mapping, with the format <host_port>:<container_port>---it maps port 5000 from the host to port 5000 in the container.
+ 
+ 
+running the browser with http://localhost:5000
+
+ 
+
+A)	To pull ubuntu image from docker registry
+
+1.	Use docker pull ubuntu command – it pulls the latest version of ubuntu image
+     
+2.	Use docker scout quickview ubuntu command – displays a quick overview of an image
+
+3.	Use docker run -it ubuntu bash – to start an interactive Docker container based on the Ubuntu operating system image
+ 
+4.	Use echo “text to print” command - used to print text or display a message on the standard output (usually the terminal or command line).
+
+5.	Use touch filename.txt command to create an empty file in the current directory
+
+6.	Use exit command to exit from the ubuntu bash script
+
+ 
+
+
+
