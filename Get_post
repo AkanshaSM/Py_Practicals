@@ -1,1 +1,65 @@
+A)	Using POST method
+Redirect.py
+from flask import Flask,redirect,url_for,request,render_template
 
+app=Flask(_name_)
+
+@app.route('/hi')
+def func1():
+    return render_template('flask.html')
+
+
+@app.route('/validate', methods = ["POST"] )  
+def validate():  
+    if request.method == 'POST' and request.form['fname'] == 'ak': 
+
+        return redirect(url_for("success"))  
+   
+
+@app.route('/success')
+def success():
+     return "Success!"
+
+if _name=='main_':
+     app.run(debug=True)
+
+B)	Using GET method
+
+from flask import Flask,redirect,url_for,request,render_template
+
+app=Flask(_name_)
+
+@app.route('/hi')
+def func1():
+    return render_template('flask.html')
+
+@app.route('/validate', methods = ["GET"] )  
+def validate():  
+    if request.method == 'GET':
+            if(request.args.get('fname') == 'ak'):
+                 return redirect(url_for("success"))
+
+@app.route('/success')
+def success():
+     return "Success!"
+
+if _name=='main_':
+     app.run(debug=True)
+
+
+c) htmlfile :
+
+<html>
+<body>
+
+<h1>Enter Name </h1>
+
+<form method = "post" action = "/validate"> 
+<!add get in method during GET method>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
