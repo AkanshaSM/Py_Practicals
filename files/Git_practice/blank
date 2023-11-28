@@ -1,1 +1,31 @@
-print("add")
+cd C:/Python25
+mkdir foldername
+py -m venv file_env
+.\file_env\Scripts\activate
+(if error then)
+Set -ExecutionPolicy Unrestricted ---->N
+Set -ExecutionPolicy RemoteSigned ---->Y
+.\file_env\Scripts\activate
+pip install flask
+python filename.py
+
+git workflow
+git init
+git remote add origin link
+git remote -v
+git config --global user.name <username>
+git config --global user.email <email>
+git branch newbranch
+git add file
+git commit -m 'msg'
+git push origin newbranch
+git checkout main
+git merge newbranch
+git add
+git commit
+git push
+git status
+git branch -d branchname
+git log
+git diff
+git config --global --edit
